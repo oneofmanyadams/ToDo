@@ -2,9 +2,15 @@
    "Tasks": [
       {
          "Name": "Add priroity/due-date sortation.",
-         "Priority": 2,
+         "Priority": -1,
          "Duration": 0,
          "Due": "2021-08-29T11:30:00Z"
+      },
+      {
+         "Name": "Auto DueDate based on priority and time required.",
+         "Priority": 1,
+         "Duration": 0,
+         "Due": "2021-08-29T21:00:00Z"
       },
       {
          "Name": "Archiving.",
@@ -14,15 +20,9 @@
       },
       {
          "Name": "Time Required.",
-         "Priority": 4,
+         "Priority": 9,
          "Duration": 0,
          "Due": "2021-08-29T13:30:00Z"
-      },
-      {
-         "Name": "Auto DueDate based on priority and time required.",
-         "Priority": 5,
-         "Duration": 0,
-         "Due": "2021-08-29T21:00:00Z"
       }
    ]
 }

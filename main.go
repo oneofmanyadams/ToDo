@@ -22,6 +22,7 @@ var add_task *bool
 var update_task *bool
 var delete_task *bool
 var display_tasks *bool
+var sort *bool
 var task_id *int
 var task_priority *string
 var task_name *string
@@ -33,6 +34,7 @@ func init() {
     update_task = flag.Bool("update", false, "Defines if a task should be updated.")
     delete_task = flag.Bool("delete", false, "Defines if a task should be deleted.")
     display_tasks = flag.Bool("display", true, "Displays table of tasks to console.")
+    sort = flag.Bool("sort", false, "Will resort based on priority and due date.")
     task_id = flag.Int("id", 0, "Id of task to use.")
     task_priority = flag.String("priority", "", "Lower the number the more important.")
     task_name = flag.String("name", "", "Name of task to use.")
@@ -144,6 +146,11 @@ func main() {
             fmt.Printf(`Task "%d" deleted.`, *task_id)
             fmt.Println()
         }
+    }
+
+    // Display all tasks.
+    if *sort == true {
+        task_master.SortByPriority()
     }
 
     // Display all tasks.
